@@ -19,8 +19,10 @@ const ListWorkout = ({ListHeaderComponent}: Props) => {
   const [loading, setLoading] = React.useState(true);
   const token = useSelector<RootState, string>(state => state.auth.token);
   const userID = useSelector<RootState, number>(state => state.auth.user_id);
+  console.log('token', token);
+
   React.useEffect(() => {
-    if (!token) return;
+    if (!token || !userID) return;
   });
 
   React.useEffect(() => {

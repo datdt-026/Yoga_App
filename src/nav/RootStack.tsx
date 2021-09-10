@@ -17,6 +17,8 @@ import {
 import {View, Colors} from 'react-native-ui-lib';
 import {ActivityIndicator, Alert} from 'react-native';
 import URL from '../config/Api';
+import DetailWorkout from '../screens/detailWorkout';
+import {IWorkout} from '../../IWorkout';
 
 export type RootStackParamList = {
   ProWelcomfile: undefined;
@@ -35,13 +37,10 @@ export type RootStackParamList = {
   FAQ: undefined;
   Filter: undefined;
   Login: undefined;
-  // //
-  // Profile: undefined | {name: string; age: string; address: string};
-  // UpdateProfile: {
-  //   name: string;
-  //   age: string;
-  //   address: string;
-  // };
+
+  DetailWorkout: {
+    item: IWorkout;
+  };
 };
 
 const Stack = createNativeStackNavigator();
@@ -117,11 +116,12 @@ const RootStack = () => {
             />
           </>
         )} */}
-        <Stack.Screen
+        {/* <Stack.Screen
           name="MainTab"
           component={MainTab}
           options={{headerShown: false}}
-        />
+        /> */}
+        <Stack.Screen name="DetailWorkout" component={DetailWorkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );

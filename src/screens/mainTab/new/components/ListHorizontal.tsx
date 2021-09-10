@@ -84,7 +84,7 @@ const ListHorizontal = () => {
   }, []);
 
   return (
-    <View paddingT-12>
+    <View paddingV-12>
       <View row spread paddingH-16 centerV>
         <Text h24>Exercises For Beginners </Text>
         <Text h15 dark70>
@@ -127,6 +127,10 @@ const ListHorizontal = () => {
           }}
         />
       )}
+
+      <View paddingH-16 centerV>
+        <Text h24>Workout </Text>
+      </View>
     </View>
   );
 };
